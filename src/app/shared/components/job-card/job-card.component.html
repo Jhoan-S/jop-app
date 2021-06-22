@@ -1,33 +1,30 @@
 <div class="card border">
 
     <div class="thumb">
-        <img src="../../../../assets/img/photosnap.svg" alt="job icon">
+        <img [src]="job.logo" alt="job icon">
     </div>
 
     <div class="details">
 
         <div class="company">
-            <h3>Photosnap</h3>
+            <h3>{{ job.company }}</h3>
         </div>
 
         <div class="job-title">
-            <h1>Senior Front-End Developer</h1>
+            <h1>{{ job.position }}</h1>
         </div>
 
         <div class="job-details">
-            <p>1d ago</p>
-            <p>Full Time</p>
-            <p>USA only</p>
+            <p>{{ job.postedAt }}</p>
+            <p>{{ job.contract }}</p>
+            <p>{{ job.location }}</p>
         </div>
 
     </div>
 
     <div class="tags">
-        <p>Frontend</p>
-        <p>Senior</p>
-        <p>HTML</p>
-        <p>CSS</p>
-        <p>JavaScript</p>
+        <p *ngFor="let language of job.languages">{{ language }}</p>
+        <p *ngFor="let tool of job.tools">{{ tool }}</p>
     </div>
 
 </div>

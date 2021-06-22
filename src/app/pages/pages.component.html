@@ -6,6 +6,8 @@
 
 <div class="container-home">
 
-    <job-card></job-card>
+    <!-- <ng-container *ngFor="let job of jobs"> -->
+        <job-card *ngFor="let job of jobs" [job]="job"></job-card>
+    <!-- </ng-container> -->
 
 </div>
